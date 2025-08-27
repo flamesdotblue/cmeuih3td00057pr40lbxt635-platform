@@ -31,7 +31,7 @@ body {
   @apply bg-white/60 backdrop-blur-md border border-white/50 shadow-soft;
 }
 
-/* Button styles */
+/* Buttons */
 .btn {
   @apply inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-medium transition-all duration-200;
 }
@@ -46,4 +46,38 @@ body {
 .divider {
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(123, 194, 194, 0.5), transparent);
+}
+
+/* Fancy gradient text */
+.gradient-text {
+  background: linear-gradient(90deg, #7bc2c2, #b4a6f0, #ffb6c1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Animations */
+@keyframes floatSlow {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes pulseSoft {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.float-slow { animation: floatSlow 8s ease-in-out infinite; }
+.pulse-soft { animation: pulseSoft 6s ease-in-out infinite; }
+
+/* Simple accordion */
+.accordion-item {
+  @apply rounded-xl border border-white/60 bg-white/50;
+}
+.accordion-button {
+  @apply w-full text-left px-5 py-4 flex items-center justify-between gap-4;
+}
+.accordion-content {
+  @apply px-5 pb-5 text-slate-600;
 }

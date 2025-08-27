@@ -1,8 +1,6 @@
-/**** Next.js configuration ****/
-/** Using JS config to ensure compatibility with Next 14 **/
+"use strict";
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-}
-
-module.exports = nextConfig
+};
+module.exports = nextConfig;
