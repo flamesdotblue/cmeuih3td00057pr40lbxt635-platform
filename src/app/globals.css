@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f7faf9;
+  --fg: #0f1a1a;
+}
+
+html, body, :root {
+  height: 100%;
+}
+
+body {
+  color: var(--fg);
+  background: var(--bg);
+}
+
+/* Smooth focus rings */
+.focus-ring {
+  @apply outline-none ring-2 ring-mist-400/40 ring-offset-2 ring-offset-white; 
+}
+
+/* Handwritten accent utility */
+.handwritten {
+  font-feature-settings: "calt" 1, "liga" 1;
+}
+
+/* Subtle glass card */
+.card {
+  @apply bg-white/60 backdrop-blur-md border border-white/50 shadow-soft;
+}
+
+/* Button styles */
+.btn {
+  @apply inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-medium transition-all duration-200;
+}
+.btn-primary {
+  @apply bg-mist-500 text-white hover:bg-mist-400 active:scale-[0.99] shadow-soft;
+}
+.btn-ghost {
+  @apply text-slate-600 hover:text-slate-800 hover:bg-white/60;
+}
+
+/* Gradient line divider */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(123, 194, 194, 0.5), transparent);
+}
